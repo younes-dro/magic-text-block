@@ -10,7 +10,7 @@
  * Plugin URI:        https://github.com/younes-dro/magic-text-block
  * License:           GPLv3 or later
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain:       dro-magic-text-block
+ * Text Domain:       magic-text-block
  * Domain Path:       /languages
  *
  * @package DroBlock
@@ -43,7 +43,7 @@ function dro_magic_text_block_block_init() {
 	}
 
 	// Load available translations.
-	wp_set_script_translations( 'dro-magic-text-block-editor-script-js', 'dro-magic-text-block' );
+	wp_set_script_translations( 'magic-text-block-editor-script-js', 'magic-text-block' );
 }
 add_action( 'init', 'dro_magic_text_block_block_init' );
 

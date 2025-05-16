@@ -1,4 +1,4 @@
-\=== Magic Text Block ===
+=== Magic Text Block ===
 Contributors:      vanbom
 Tags:              gutenberg, blocks, text formatting, editor, typography
 Requires at least: 5.6
@@ -8,8 +8,7 @@ Stable tag:        1.0.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-== Short Description ==
-Enhance your Gutenberg editor with advanced text formatting options, including gradient stroke text, gradient text color, text background images, post theme selector, and custom underline effects.
+Enhance your Gutenberg editor with advanced text formatting options.
 
 == Description ==
 
