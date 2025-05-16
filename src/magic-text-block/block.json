@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "dro-block/magic-text-block",
+	"version": "1.0.0",
+	"title": "Magic Text Block",
+	"category": "text",
+	"icon": "smiley",
+	"description": "Add custom style to text",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "dro-magic-text",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

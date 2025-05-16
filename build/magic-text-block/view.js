@@ -1,0 +1,1 @@
+console.log("Hello World! (from dro-block-magic-text-block block)");
