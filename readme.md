@@ -1,5 +1,5 @@
-#  Magic Text Components
-**Magic Text Components** is a collection of advanced text formatting tools designed to extend the WordPress Gutenberg editor. These components allow you to easily apply creative typography and styling effects—such as gradient strokes, colorful text gradients, text background images, and custom underlines—directly within your content editor. Perfect for bloggers, designers, and content creators, these tools help make your content visually striking without any coding required.
+#  Magic Text Block
+**Magic Text Block** is a collection of advanced text formatting tools designed to extend the WordPress Gutenberg editor. These components allow you to easily apply creative typography and styling effects—such as gradient strokes, colorful text gradients, text background images, and custom underlines—directly within your content editor. Perfect for bloggers, designers, and content creators, these tools help make your content visually striking without any coding required.
 
 ---
 
