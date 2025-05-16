@@ -76,4 +76,4 @@
 
 ```bash
 
-git clone https://github.com/younes-dro/magic-text-components.git
+git clone https://github.com/younes-dro/magic-text-block.git
