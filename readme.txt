@@ -1,5 +1,6 @@
 === Magic Text Block ===
 Contributors:      vanbom
+Donate link: paypal.me/younesdro
 Tags:              gutenberg, blocks, text formatting, editor, typography
 Requires at least: 5.6
 Tested up to:      6.8
