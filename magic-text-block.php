@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Magic Text Block
- * Description:       Enhance your Gutenberg editor with advanced Rich Text formatting options directly in the toolbar. Add gradient stroke text, gradient text color, text background images, post theme selector, and custom underline effects. Perfect for creating visually stunning content without any coding.
+ * Description:       Enhance your Gutenberg editor with advanced Rich Text formatting options directly in the toolbar.
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Version:           1.0.0
