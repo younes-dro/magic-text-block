@@ -1,7 +1,7 @@
 === Magic Text Block ===
 Contributors:      vanbom
 Donate link: https://paypal.me/younesdro
-Tags:              gutenberg, blocks, text formatting, editor, typography
+Tags:              block, gutenberg, rich text, typography
 Requires at least: 6.5
 Tested up to:      6.8
 Requires PHP:      7.4
