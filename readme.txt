@@ -62,9 +62,9 @@ Initial release. No upgrade instructions required.
 
 1. Gradient Stroke – Apply unique strokes to text using gradients.
 2. Gradient Text Color – Enhance text appearance with gradient colors.
-3. Post Theme Selector – Easily adjust text styling per post/page.
-4. Text Background Image – Add visual depth with background images.
-5. Underline Effect – Improve text with custom underline styles.
+3. Text Background Image – Add visual depth with background images.
+4. Underline Effect – Improve text with custom underline styles.
+5. Post Theme Selector – Easily adjust text styling per post/page.
 
 == Changelog ==
 
