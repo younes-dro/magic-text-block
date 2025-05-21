@@ -45,6 +45,11 @@ Compatible with all WordPress themes and works seamlessly with the Gutenberg blo
 = How do I use the Magic Text Block? =
 Simply highlight the text you want to style in the Gutenberg editor, and choose the Magic Text Block options from the toolbar.
 
+= Where can I find the source JavaScript files? =
+The source code for this plugin, including the original JavaScript files used to build the block, is available in the GitHub repository:
+https://github.com/younes-dro/magic-text-block/tree/main/src/magic-text-block
+These files are not included in the plugin ZIP but are available in the public repository for transparency and contribution.
+
 = Can I customize the gradient colors? =
 Yes, the gradient colors are fully customizable through the editor interface.
 
