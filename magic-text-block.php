@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'DRO_BLOCK_MAGIC_TEXT_BLOCK_VERSION', '1.0.0' );
+define( 'DRO_MAGIC_TEXT_BLOCK_VERSION', '1.0.0' );
 
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
@@ -99,7 +99,7 @@ function dro_magic_text_enqueue_theme_css() {
 
 	if ( $saved_theme && $saved_theme !== 'default' ) {
 		$theme_css_url = plugin_dir_url( __FILE__ ) . 'build/magic-text-block/index.css';
-		wp_enqueue_style( 'magic-text-theme-css', $theme_css_url, array(), DRO_BLOCK_MAGIC_TEXT_BLOCK_VERSION );
+		wp_enqueue_style( 'magic-text-theme-css', $theme_css_url, array(), DRO_MAGIC_TEXT_BLOCK_VERSION );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'dro_magic_text_enqueue_theme_css' );
