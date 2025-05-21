@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Magic Text Block
- * Description:       Enhance your Gutenberg editor with advanced Rich Text formatting options directly in the toolbar. Add gradient stroke text, gradient text color, text background images, post theme selector, and custom underline effects. Perfect for creating visually stunning content without any coding.
+ * Description:       Enhance your Gutenberg editor with advanced Rich Text formatting options directly in the toolbar.
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Version:           1.0.0
@@ -10,8 +10,7 @@
  * Plugin URI:        https://github.com/younes-dro/magic-text-block
  * License:           GPLv3 or later
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain:       dro-magic-text-block
- * Domain Path:       /languages
+ * Text Domain:       magic-text-block
  *
  * @package DroBlock
  */
@@ -20,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'DRO_BLOCK_MAGIC_TEXT_BLOCK_VERSION', '1.0.0' );
+define( 'DRO_MAGIC_TEXT_BLOCK_VERSION', '1.0.0' );
 
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
@@ -43,7 +42,7 @@ function dro_magic_text_block_block_init() {
 	}
 
 	// Load available translations.
-	wp_set_script_translations( 'dro-magic-text-block-editor-script-js', 'dro-magic-text-block' );
+	wp_set_script_translations( 'magic-text-block-editor-script-js', 'magic-text-block' );
 }
 add_action( 'init', 'dro_magic_text_block_block_init' );
 
@@ -100,7 +99,7 @@ function dro_magic_text_enqueue_theme_css() {
 
 	if ( $saved_theme && $saved_theme !== 'default' ) {
 		$theme_css_url = plugin_dir_url( __FILE__ ) . 'build/magic-text-block/index.css';
-		wp_enqueue_style( 'magic-text-theme-css', $theme_css_url, array(), DRO_BLOCK_MAGIC_TEXT_BLOCK_VERSION );
+		wp_enqueue_style( 'magic-text-theme-css', $theme_css_url, array(), DRO_MAGIC_TEXT_BLOCK_VERSION );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'dro_magic_text_enqueue_theme_css' );
