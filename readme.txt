@@ -26,6 +26,8 @@ Enhance your Gutenberg editor with advanced text formatting options.
 Perfect for bloggers, designers, and content creators looking to make their content stand out without requiring any coding knowledge. Simply select your text and apply the formatting options from the text toolbar.
 Compatible with all WordPress themes and works seamlessly with the Gutenberg block editor.
 
+This plugin's code is [available on GitHub](https://github.com/younes-dro/magic-text-block). Please feel free to fork the repository and send a pull request. If you find a bug in the plugin, open an issue.
+
 == Installation ==
 
 = Installation from within WordPress =
