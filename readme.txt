@@ -28,6 +28,12 @@ Compatible with all WordPress themes and works seamlessly with the Gutenberg blo
 
 This plugin's code is [available on GitHub](https://github.com/younes-dro/magic-text-block). Please feel free to fork the repository and send a pull request. If you find a bug in the plugin, open an issue.
 
+== Video Tutorial ==
+
+Watch our step-by-step guide on how to apply Magic Text Block formatting in WordPress! Learn how to enhance your text with gradient effects, background images, and stylish underlines.
+
+📺 **Watch the tutorial here**: [https://www.youtube.com/watch?v=dPYiz_a6-6A]
+
 == Installation ==
 
 = Installation from within WordPress =
