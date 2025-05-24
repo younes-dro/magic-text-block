@@ -32,7 +32,7 @@ This plugin's code is [available on GitHub](https://github.com/younes-dro/magic-
 
 Watch our step-by-step guide on how to apply Magic Text Block formatting in WordPress! Learn how to enhance your text with gradient effects, background images, and stylish underlines.
 
-📺 **Watch the tutorial here**: [https://www.youtube.com/watch?v=dPYiz_a6-6A]
+📺 **Watch the tutorial here**: [https://www.youtube.com/watch?v=dPYiz_a6-6A](https://www.youtube.com/watch?v=dPYiz_a6-6A)
 
 == Installation ==
 
