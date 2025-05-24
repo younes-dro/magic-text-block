@@ -267,12 +267,12 @@ body.theme-milkshake {
   .wp-block-media-text,
   article,
   .comment-body {
-    background-color: $milkshake-surface;
+    // background-color: $milkshake-surface;
     color: $milkshake-on-surface;
-    box-shadow: 0 6px 18px $milkshake-shadow;
+    // box-shadow: 0 6px 18px $milkshake-shadow;
     border-radius: 16px;
     overflow: hidden;
-    border: 1px solid rgba(255, 204, 242, 0.5);
+    // border: 1px solid rgba(255, 204, 242, 0.5);
     padding: 24px;
   }
 
