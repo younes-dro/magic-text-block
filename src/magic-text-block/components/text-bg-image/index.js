@@ -138,8 +138,8 @@ const TextBgImage = ({ value, onChange, isActive }) => {
 };
 registerFormatType("dro-magic-text/text-bg-image", {
   title: __("Text bg", "dro-magic-text"),
-  className: null,
-  tagName: "mark",
+  tagName: "span",
+  className: 'dro-magic-text-bg-image',
   attributes: {
     style: "style",
   },
