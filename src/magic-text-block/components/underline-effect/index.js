@@ -95,8 +95,8 @@ const UnderlineEffect = ({
 
 registerFormatType("dro-magic-text/underline-effect", {
   title: __("Underline Effect", "dro-magic-text"),
-  tagName: "i",
-  className: null,
+  tagName: "span",
+  className: "dro-magic-text-underline-clip-effect",
   attributes: {
     style: "style",
     class: "class",

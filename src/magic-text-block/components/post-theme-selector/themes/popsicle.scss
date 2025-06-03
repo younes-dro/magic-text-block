@@ -79,12 +79,12 @@ body.theme-popsicle {
   .card,
   .wp-block-group,
   .wp-block-column {
-    background-color: rgba(255, 255, 255, 0.1);
+    // background-color: rgba(255, 255, 255, 0.1);
     color: $popsicle-text;
-    border: 1px solid $popsicle-border;
+    // border: 1px solid $popsicle-border;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px $popsicle-shadow;
+    // box-shadow: 0 4px 6px $popsicle-shadow;
   }
 
   // Navbar

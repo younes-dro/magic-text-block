@@ -1,0 +1,186 @@
+:root{
+  --tooltip-bg-color: #333;
+  --tooltip-text-color: #fff;
+  --tooltip-padding: 8px 12px;
+  --tooltip-border-radius: 6px;
+  --tooltip-font-size: 14px;
+  --tooltip-font-weight: normal;
+}
+/* Base tooltip styling */
+.dro-magic-text-tooltip {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dotted #41e938;
+
+}
+
+.dro-magic-text-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--tooltip-bg-color, #333);
+  color: var(--tooltip-text-color, #fff);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: normal;
+  white-space: nowrap;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+  margin-bottom: 8px;
+}
+
+/* Tooltip arrow */
+.dro-magic-text-tooltip::before {
+  content: "ℹ️";
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+  margin-bottom: 2px;
+}
+
+.dro-magic-text-tooltip:hover::after,
+.dro-magic-text-tooltip:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Alternative positioning options */
+
+/* Tooltip appears below */
+.dro-magic-text-tooltip.tooltip-bottom::after {
+  bottom: auto;
+  top: 100%;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.dro-magic-text-tooltip.tooltip-bottom::before {
+  bottom: auto;
+  top: 100%;
+  border-top-color: transparent;
+  border-bottom-color: #333;
+  margin-bottom: 0;
+  margin-top: 2px;
+}
+
+/* Tooltip appears to the right */
+.dro-magic-text-tooltip.tooltip-right::after {
+  bottom: auto;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  margin-bottom: 0;
+  margin-left: 8px;
+}
+
+.dro-magic-text-tooltip.tooltip-right::before {
+  bottom: auto;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  border-top-color: transparent;
+  border-right-color: #333;
+  margin-bottom: 0;
+  margin-left: 2px;
+}
+
+/* Responsive: Prevent tooltip from going off-screen */
+@media (max-width: 768px) {
+  .dro-magic-text-tooltip::after {
+    white-space: normal;
+    max-width: 200px;
+    word-wrap: break-word;
+  }
+}
+
+/* Popover styling */
+
+.tooltip-effect-popover {
+  padding: 10px 5px;
+//   min-width: 180px;
+  z-index: 99999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #f5f5f5;
+
+  h4 {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e1e1e;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .components-text-control__input {
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin-bottom: 12px;
+    width: 100%;
+    box-shadow: none;
+    transition: border-color 0.2s ease;
+
+    &:focus {
+      border-color: #3858e9;
+      box-shadow: 0 0 0 1px #3858e9;
+    }
+  }
+
+
+  .components-button {
+    width: 100%;
+    justify-content: center;
+    padding: 8px 16px;
+    height: auto;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+
+    &.is-primary {
+      background-color: #3858e9;
+      border-color: #3858e9;
+
+      &:hover:not(:disabled) {
+        background-color: #1f47d0;
+        border-color: #1f47d0;
+      }
+    }
+  }
+
+  .components-color-picker {
+    margin: 16px 0;
+    padding: 12px;
+    background: #f8f9f9;
+    border-radius: 4px;
+
+    &__header {
+      display: none;
+    }
+
+    &__body {
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    min-width: 240px;
+    padding: 12px;
+  }
+}
