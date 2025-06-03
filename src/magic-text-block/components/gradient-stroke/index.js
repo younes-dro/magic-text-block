@@ -127,8 +127,8 @@ const GradientStroke = ({
 
 registerFormatType("dro-magic-text/gradient-stroke", {
   title: __("Gradient Stroke", "dro-magic-text"),
-  tagName: "bdo", // Using <bdo> tag to avoid conflicts
-  className: null,
+  tagName: "span",
+  className: 'dro-magic-text-gradient-stroke',
   attributes: {
     style: "style",
     class: "class",

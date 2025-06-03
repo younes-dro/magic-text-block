@@ -136,7 +136,7 @@ const GradientTextColor = ({
 registerFormatType("dro-magic-text/gradient", {
   title: "Gradient",
   tagName: "span",
-  className: null,
+  className: 'dro-magic-text-gradient',
   attributes: {
     style: "style",
   },
