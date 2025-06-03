@@ -64,7 +64,13 @@
 
 [🎥 Demo video here](https://www.awesomescreenshot.com/video/39031925?key=aa41ad83e0eedf3e614060c6e2e05ffb)
 
-  
+
+ ## Tooltip 
+
+ 
+![screenshot-6](https://github.com/user-attachments/assets/8a96098a-ccfe-49da-9be2-d7091e86cb2e)
+
+[🎥 Demo video here](https://www.awesomescreenshot.com/video/40571636?key=29e3628e162ef8121e4fec5597cfe10a)
 
 ## Installation
 
