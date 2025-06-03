@@ -5,7 +5,7 @@ Tags:              block, gutenberg, rich text, typography
 Requires at least: 6.5
 Tested up to:      6.8
 Requires PHP:      7.4
-Stable tag:        1.0.0
+Stable tag:        1.1.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -22,6 +22,7 @@ Enhance your Gutenberg editor with advanced text formatting options.
 * **Post Theme Selector**: Apply custom themes (Dark, Light, Milkshake, Popsicle) to individual posts or pages, creating unique visual experiences for different content.
 * **Text Background Image**: Select images from your media library to apply as backgrounds behind specific portions of text, creating striking visual effects.
 * **Underline Effects**: Apply decorative curved underline effects with customizable colors to highlight important text.
+* **Tooltip Text**: Add customizable tooltip bubbles to text with your own message, background color, and text color—great for inline explanations or quick hints.
 
 Perfect for bloggers, designers, and content creators looking to make their content stand out without requiring any coding knowledge. Simply select your text and apply the formatting options from the text toolbar.
 Compatible with all WordPress themes and works seamlessly with the Gutenberg block editor.
@@ -63,6 +64,9 @@ Yes, the gradient colors are fully customizable through the editor interface.
 
 == Upgrade Notice ==
 
+= 1.1.0 =
+Adds a new Tooltip Text component with customizable hover tooltips. Also improves semantic HTML by switching to `<span>` for better accessibility and markup consistency.
+
 = 1.0.0 =
 Initial release. No upgrade instructions required.
 
@@ -73,9 +77,13 @@ Initial release. No upgrade instructions required.
 3. Text Background Image – Add visual depth with background images.
 4. Underline Effect – Improve text with custom underline styles.
 5. Post Theme Selector – Easily adjust text styling per post/page.
+6. Tooltip Text - customizable tooltip. 
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.1.0 =
+* Added new **Tooltip Text** component: allows you to display a customizable tooltip on hover, with configurable text, background color, and text color.
+* Updated the components to use a `<span>` tag to respect proper text-level semantics.
 
+= 1.0.0 =
 * Initial release 🎉
