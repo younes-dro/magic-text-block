@@ -1,4 +1,14 @@
-#  Magic Text Block
+# Magic Text Block
+
+![Magic Text Block Banner](https://ps.w.org/magic-text-block/assets/banner-772-250.png)
+
+[![Plugin Version](https://img.shields.io/badge/version-1.1.0-blue)](https://wordpress.org/plugins/magic-text-block/)
+[![WordPress Tested](https://img.shields.io/badge/WordPress-6.5+-brightgreen)](https://wordpress.org/plugins/magic-text-block/)
+
+📦 **Available on WordPress.org**  
+🔗 [Download from the WordPress Plugin Directory](https://wordpress.org/plugins/magic-text-block/)
+
+---
 **Magic Text Block** is a collection of advanced text formatting tools designed to extend the WordPress Gutenberg editor. These components allow you to easily apply creative typography and styling effects—such as gradient strokes, colorful text gradients, text background images, and custom underlines—directly from the text toolbar. Perfect for bloggers, designers, and content creators, these tools help make your content visually striking without any coding required.
 
 ---
