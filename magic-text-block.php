@@ -4,7 +4,7 @@
  * Description:       Enhance your Gutenberg editor with advanced Rich Text formatting options directly in the toolbar.
  * Requires at least: 6.5
  * Requires PHP:      7.4
- * Version:           1.1.0
+ * Version:           1.2.0
  * Author:            Younes DRO
  * Author URI:        https://github.com/younes-dro/
  * Plugin URI:        https://github.com/younes-dro/magic-text-block
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'DRO_MAGIC_TEXT_BLOCK_VERSION', '1.1.0' );
+define( 'DRO_MAGIC_TEXT_BLOCK_VERSION', '1.2.0' );
 
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
