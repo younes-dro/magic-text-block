@@ -19,8 +19,8 @@
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--tooltip-bg-color, #333);
-  color: var(--tooltip-text-color, #fff);
+  background: var(--tooltip-bg);
+  color: var(--tooltip-text-color);
   padding: 8px 12px;
   border-radius: 6px;
   font-size: 14px;
@@ -33,6 +33,10 @@
     opacity 0.3s,
     visibility 0.3s;
   margin-bottom: 8px;
+}
+// Fallback for older browsers
+.dro-magic-text-tooltip:not([style*="--tooltip-use-gradient: true"])::after {
+  background-color: var(--tooltip-bg);
 }
 
 .dro-magic-text-tooltip:hover::after,
