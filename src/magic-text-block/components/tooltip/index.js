@@ -3,13 +3,13 @@ import { RichTextToolbarButton } from '@wordpress/block-editor';
 import {
     Popover,
     TextControl,
-    RadioControl,
+    SelectControl,
     Button,
     ColorPicker,
     ToggleControl,
     TabPanel,
-    __experimentalHStack as HStack,
-    __experimentalVStack as VStack
+    Flex,
+    FlexBlock
 } from '@wordpress/components';
 import { comment } from '@wordpress/icons';
 import { useState, useCallback } from '@wordpress/element';
@@ -32,7 +32,6 @@ const TooltipEffectUI = ({
     setTooltipTextColor,
     tooltipPosition,
     setTooltipPosition,
-    // New gradient props
     useGradient,
     setUseGradient,
     gradientStartColor,
@@ -72,10 +71,10 @@ const TooltipEffectUI = ({
                 />
 
                 {/* Tooltip Position */}
-                <RadioControl
+                <SelectControl
                     label={LABEL_TOOLTIP_POSITION}
                     help={__('Select the position of the tooltip', 'dro-magic-text')}
-                    selected={tooltipPosition}
+                    value={tooltipPosition}
                     options={tooltipPositions}
                     onChange={(value) => setTooltipPosition(value)}
                     style={{ marginBottom: '16px' }}
@@ -113,9 +112,8 @@ const TooltipEffectUI = ({
                     {(tab) => (
                         <div style={{ marginTop: '12px' }}>
                             {tab.name === 'background' && (
-                                <VStack spacing={3}>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                                     {!useGradient ? (
-                                        // Solid Color
                                         <div>
                                             <strong>{__('Background Color', 'dro-magic-text')}</strong>
                                             <ColorPicker
@@ -124,14 +122,13 @@ const TooltipEffectUI = ({
                                             />
                                         </div>
                                     ) : (
-                                        // Gradient Colors
                                         <div>
                                             <strong>{__('Gradient Background', 'dro-magic-text')}</strong>
 
                                             {/* Gradient Direction */}
-                                            <RadioControl
+                                            <SelectControl
                                                 label={__('Gradient Direction', 'dro-magic-text')}
-                                                selected={gradientDirection}
+                                                value={gradientDirection}
                                                 options={gradientDirections}
                                                 onChange={(value) => setGradientDirection(value)}
                                                 style={{ marginBottom: '12px' }}
@@ -170,7 +167,7 @@ const TooltipEffectUI = ({
                                             </div>
                                         </div>
                                     )}
-                                </VStack>
+                                </div>
                             )}
 
                             {tab.name === 'text' && (
@@ -186,21 +183,24 @@ const TooltipEffectUI = ({
                     )}
                 </TabPanel>
 
-                {/* Action Buttons */}
-                <HStack justify="space-between" style={{ marginTop: '20px' }}>
-                    <Button
-                        variant="secondary"
-                        onClick={onClose}
-                    >
-                        {__('Cancel', 'dro-magic-text')}
-                    </Button>
-                    <Button
-                        variant="primary"
-                        onClick={onChange}
-                    >
-                        {LABEL_APPLY_BUTTON}
-                    </Button>
-                </HStack>
+                <Flex justify="space-between" style={{ marginTop: '20px' }}>
+                    <FlexBlock>
+                        <Button
+                            variant="secondary"
+                            onClick={onClose}
+                        >
+                            {__('Cancel', 'dro-magic-text')}
+                        </Button>
+                    </FlexBlock>
+                    <FlexBlock>
+                        <Button
+                            variant="primary"
+                            onClick={onChange}
+                        >
+                            {LABEL_APPLY_BUTTON}
+                        </Button>
+                    </FlexBlock>
+                </Flex>
             </div>
         </Popover>
     );
@@ -214,7 +214,6 @@ const TooltipEffect = ({ isActive, value, onChange, textDomain = "dro-magic-text
     const [tooltipTextColor, setTooltipTextColor] = useState('#ffffff');
     const [tooltipPosition, setTooltipPosition] = useState('top');
 
-    // New gradient states
     const [useGradient, setUseGradient] = useState(false);
     const [gradientStartColor, setGradientStartColor] = useState('#4f46e5');
     const [gradientEndColor, setGradientEndColor] = useState('#7c3aed');
@@ -226,7 +225,7 @@ const TooltipEffect = ({ isActive, value, onChange, textDomain = "dro-magic-text
     const LABEL_APPLY_BUTTON = __("Apply", textDomain) || "Apply";
 
     const applyTooltip = useCallback(() => {
-        // Generate background style based on gradient toggle
+
         let backgroundStyle;
         if (useGradient) {
             backgroundStyle = `linear-gradient(${gradientDirection}, ${gradientStartColor}, ${gradientEndColor})`;
@@ -246,8 +245,6 @@ const TooltipEffect = ({ isActive, value, onChange, textDomain = "dro-magic-text
 
     const handleTooltipClick = useCallback(() => {
         if (isActive) {
-            // Load existing tooltip data when editing
-            // You can implement loadExistingTooltipData here
             setIsPopoverVisible(true);
         } else {
             setIsPopoverVisible(true);
@@ -280,7 +277,6 @@ const TooltipEffect = ({ isActive, value, onChange, textDomain = "dro-magic-text
                     setTooltipTextColor={setTooltipTextColor}
                     tooltipPosition={tooltipPosition}
                     setTooltipPosition={setTooltipPosition}
-                    // New gradient props
                     useGradient={useGradient}
                     setUseGradient={setUseGradient}
                     gradientStartColor={gradientStartColor}
