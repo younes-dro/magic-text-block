@@ -1,11 +1,11 @@
-=== Magic Text Block ===
+=== Magic Text Block - Effects & Styling Toolkit - Gradients, Tooltips, Backgrounds & Custom Themes ===
 Contributors:      vanbom
 Donate link: https://paypal.me/younesdro
 Tags:              block, gutenberg, rich text, typography
 Requires at least: 6.5
 Tested up to:      6.8
 Requires PHP:      7.4
-Stable tag:        1.1.0
+Stable tag:        1.2.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -62,13 +62,6 @@ These files are not included in the plugin ZIP but are available in the public r
 = Can I customize the gradient colors? =
 Yes, the gradient colors are fully customizable through the editor interface.
 
-== Upgrade Notice ==
-
-= 1.1.0 =
-Adds a new Tooltip Text component with customizable hover tooltips. Also improves semantic HTML by switching to `<span>` for better accessibility and markup consistency.
-
-= 1.0.0 =
-Initial release. No upgrade instructions required.
 
 == Screenshots ==
 
@@ -80,6 +73,11 @@ Initial release. No upgrade instructions required.
 6. Tooltip Text - customizable tooltip. 
 
 == Changelog ==
+
+= 1.2.0 =
+* Added **Tooltip Position** options: choose from top, bottom, left, right, and diagonal positions.
+* Added **Gradient Background** support: create beautiful gradient tooltips with customizable colors and directions.
+* Improved UI: replaced radio controls with select menus for better space utilization.
 
 = 1.1.0 =
 * Added new **Tooltip Text** component: allows you to display a customizable tooltip on hover, with configurable text, background color, and text color.
