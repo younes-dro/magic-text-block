@@ -1,16 +1,18 @@
 import { registerFormatType, toggleFormat } from '@wordpress/rich-text';
 import { RichTextToolbarButton } from '@wordpress/block-editor';
-import { Popover, TextControl, Button, ColorPicker } from '@wordpress/components';
+import { Popover, TextControl, RadioControl, Button, ColorPicker } from '@wordpress/components';
 import { comment } from '@wordpress/icons';
 import { useState, useCallback } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 import './style.scss';
+import { tooltipPositions } from './options';
 
 
 const TooltipEffectUI = ({
     LABEL_POPOVER_TITLE,
     LABEL_TOOLTIP_TEXT,
     LABEL_APPLY_BUTTON,
+    LABEL_TOOLTIP_POSITION,
     onChange,
     setTooltipText,
     popoverAnchor,
@@ -18,11 +20,13 @@ const TooltipEffectUI = ({
     setTolltipBgColor,
     tooltipTextColor,
     setTooltipTextColor,
+    tooltipPosition,
+    setTooltipPosition,
 
 }) => {
 
     return (
-        <Popover  anchor={popoverAnchor} className="tooltip-effect-popover">
+        <Popover anchor={popoverAnchor} className="tooltip-effect-popover">
             <h4>{LABEL_POPOVER_TITLE}</h4>
             <TextControl
                 label={LABEL_TOOLTIP_TEXT}
@@ -31,12 +35,21 @@ const TooltipEffectUI = ({
                     setTooltipText(value);
                 }}
             />
+            <RadioControl
+                label={LABEL_TOOLTIP_POSITION}
+                help={__('Select the position of the tooltip', 'dro-magic-text')}
+                selected={tooltipPosition}
+                options={tooltipPositions}
+                onChange={(value) => {
+                    setTooltipPosition(value);
+                }}
+            />
             <strong>{__('Tooltip Background color', 'dro-magic-text')}</strong>
             <ColorPicker
                 color={tooltipBgColor}
                 onChange={(color) => setTolltipBgColor(color)}
             />
-            <stong>{__('Tooltip Text color', 'dro-magic-text')}</stong>
+            <strong>{__('Tooltip Text color', 'dro-magic-text')}</strong>
             <ColorPicker
                 color={tooltipTextColor}
                 onChange={(color) => setTooltipTextColor(color)}
@@ -55,11 +68,12 @@ const TooltipEffect = ({ isActive, value, onChange, textDomain = "dro-magic-text
     const [popoverAnchor, setPopoverAnchor] = useState();
     const [tooltipBgColor, setTolltipBgColor] = useState('#000000');
     const [tooltipTextColor, setTooltipTextColor] = useState('#ffffff');
+    const [tooltipPosition, setTooltipPosition] = useState('top');
 
     const LABEL_POPOVER_TITLE =
         __("Tooltip Settings", textDomain) || "Tooltip Settings";
     const LABEL_TOOLTIP_TEXT = __("Tooltip Text", textDomain) || "Tooltip Text";
-    // const LABEL_TOOLTIP_CLASS = __("Tooltip Class", textDomain) || "Tooltip Class";
+    const LABEL_TOOLTIP_POSITION = __("Tooltip Position", textDomain) || "Tooltip Position";
     // const LABEL_TOOLTIP_STYLE = __("Tooltip Style", textDomain) || "Tooltip Style";
     const LABEL_APPLY_BUTTON = __("Apply", textDomain) || "Apply";
 
@@ -68,13 +82,13 @@ const TooltipEffect = ({ isActive, value, onChange, textDomain = "dro-magic-text
             type: 'dro-magic-text/tooltip',
             attributes: {
                 'data-tooltip': tooltipText,
-                class: 'dro-magic-text-tooltip',
+                class: `tooltip-${tooltipPosition}`,
                 style: `--tooltip-bg-color: ${tooltipBgColor}; --tooltip-text-color: ${tooltipTextColor};`,
             }
         })
         );
 
-    }, [value, onChange, tooltipText, tooltipBgColor, tooltipTextColor]);
+    }, [value, onChange, tooltipText, tooltipBgColor, tooltipTextColor, tooltipPosition]);
 
     const handleTooltipClick = useCallback(() => {
         if (isActive) {
@@ -107,9 +121,12 @@ const TooltipEffect = ({ isActive, value, onChange, textDomain = "dro-magic-text
                     setTolltipBgColor={setTolltipBgColor}
                     tooltipTextColor={tooltipTextColor}
                     setTooltipTextColor={setTooltipTextColor}
+                    tooltipPosition={tooltipPosition}
+                    setTooltipPosition={setTooltipPosition}
                     LABEL_POPOVER_TITLE={LABEL_POPOVER_TITLE}
                     LABEL_TOOLTIP_TEXT={LABEL_TOOLTIP_TEXT}
                     LABEL_APPLY_BUTTON={LABEL_APPLY_BUTTON}
+                    LABEL_TOOLTIP_POSITION={LABEL_TOOLTIP_POSITION}
 
                 />
             )}

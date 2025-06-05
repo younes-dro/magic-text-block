@@ -1,4 +1,4 @@
-:root{
+:root {
   --tooltip-bg-color: #333;
   --tooltip-text-color: #fff;
   --tooltip-padding: 8px 12px;
@@ -11,7 +11,6 @@
   position: relative;
   cursor: help;
   border-bottom: 1px dotted #41e938;
-
 }
 
 .dro-magic-text-tooltip::after {
@@ -36,24 +35,6 @@
   margin-bottom: 8px;
 }
 
-/* Tooltip arrow */
-.dro-magic-text-tooltip::before {
-  content: "ℹ️";
-  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 6px solid transparent;
-  border-top-color: #333;
-  opacity: 0;
-  visibility: hidden;
-  transition:
-    opacity 0.3s,
-    visibility 0.3s;
-  margin-bottom: 2px;
-}
-
 .dro-magic-text-tooltip:hover::after,
 .dro-magic-text-tooltip:hover::before {
   opacity: 1;
@@ -70,15 +51,6 @@
   margin-top: 8px;
 }
 
-.dro-magic-text-tooltip.tooltip-bottom::before {
-  bottom: auto;
-  top: 100%;
-  border-top-color: transparent;
-  border-bottom-color: #333;
-  margin-bottom: 0;
-  margin-top: 2px;
-}
-
 /* Tooltip appears to the right */
 .dro-magic-text-tooltip.tooltip-right::after {
   bottom: auto;
@@ -89,15 +61,19 @@
   margin-left: 8px;
 }
 
-.dro-magic-text-tooltip.tooltip-right::before {
+/* Tooltip appears to the left */
+.dro-magic-text-tooltip.tooltip-left::after {
   bottom: auto;
   top: 50%;
-  left: 100%;
+  right: 100%;
+  left: auto;
   transform: translateY(-50%);
-  border-top-color: transparent;
-  border-right-color: #333;
   margin-bottom: 0;
-  margin-left: 2px;
+  margin-right: 8px;
+  margin-left: 0;
+  white-space: nowrap;
+  max-width: 200px;
+  word-wrap: break-word;
 }
 
 /* Responsive: Prevent tooltip from going off-screen */
@@ -107,18 +83,30 @@
     max-width: 200px;
     word-wrap: break-word;
   }
+  .dro-magic-text-tooltip.tooltip-left::after {
+    right: auto;
+    left: 100%;
+    margin-right: 0;
+    margin-left: 8px;
+  }
 }
 
 /* Popover styling */
 
 .tooltip-effect-popover {
   padding: 10px 5px;
-//   min-width: 180px;
+  min-width: 180px;
   z-index: 99999;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   background: #fff;
   border: 1px solid #f5f5f5;
+  .components-popover__content {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+  }
 
   h4 {
     margin: 0 0 12px 0;
@@ -143,7 +131,6 @@
       box-shadow: 0 0 0 1px #3858e9;
     }
   }
-
 
   .components-button {
     width: 100%;
