@@ -24,7 +24,7 @@ const GradientStrokeUI = ({
   LABEL_APPLY_BUTTON,
 }) => {
   return (
-    <Popover anchor={popoverAnchor} className="gradient-stroke-popover">
+    <Popover anchor={popoverAnchor} className="dro-magic-text-popover">
       <h4>{LABEL_POPOVER_TITLE}</h4>
 
       <GradientPicker

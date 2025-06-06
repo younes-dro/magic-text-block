@@ -15,7 +15,7 @@ const UnderlineEffectUI = ({
   LABEL_POPOVER_TITLE,
 }) => {
   return (
-    <Popover anchor={popoverAnchor}>
+    <Popover className='dro-magic-text-popover' anchor={popoverAnchor}>
       <h4>{LABEL_POPOVER_TITLE}</h4>
       <ColorPicker
         color={borderColor}
