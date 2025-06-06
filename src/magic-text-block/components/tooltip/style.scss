@@ -79,6 +79,91 @@
   max-width: 200px;
   word-wrap: break-word;
 }
+/* Diagonal positioning options */
+
+/* Tooltip appears at top-left */
+.dro-magic-text-tooltip.tooltip-top-left::after {
+  bottom: 100%;
+  top: auto;
+  right: 100%;
+  left: auto;
+  transform: translateX(-8px) translateY(-8px);
+  margin-bottom: 8px;
+  margin-right: 8px;
+  white-space: nowrap;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+/* Tooltip appears at top-right */
+.dro-magic-text-tooltip.tooltip-top-right::after {
+  bottom: 100%;
+  top: auto;
+  left: 100%;
+  right: auto;
+  transform: translateX(8px) translateY(-8px);
+  margin-bottom: 8px;
+  margin-left: 8px;
+  white-space: nowrap;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+/* Tooltip appears at bottom-left */
+.dro-magic-text-tooltip.tooltip-bottom-left::after {
+  top: 100%;
+  bottom: auto;
+  right: 100%;
+  left: auto;
+  transform: translateX(-8px) translateY(8px);
+  margin-top: 8px;
+  margin-right: 8px;
+  white-space: nowrap;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+/* Tooltip appears at bottom-right */
+.dro-magic-text-tooltip.tooltip-bottom-right::after {
+  top: 100%;
+  bottom: auto;
+  left: 100%;
+  right: auto;
+  transform: translateX(8px) translateY(8px);
+  margin-top: 8px;
+  margin-left: 8px;
+  white-space: nowrap;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+/* Responsive adjustments for diagonal positions */
+@media (max-width: 768px) {
+  .dro-magic-text-tooltip.tooltip-top-left::after,
+  .dro-magic-text-tooltip.tooltip-top-right::after,
+  .dro-magic-text-tooltip.tooltip-bottom-left::after,
+  .dro-magic-text-tooltip.tooltip-bottom-right::after {
+    white-space: normal;
+    max-width: 150px;
+    word-wrap: break-word;
+  }
+
+  .dro-magic-text-tooltip.tooltip-top-left::after {
+    transform: translateX(-4px) translateY(-4px);
+  }
+
+  .dro-magic-text-tooltip.tooltip-top-right::after {
+    transform: translateX(4px) translateY(-4px);
+  }
+
+  .dro-magic-text-tooltip.tooltip-bottom-left::after {
+    transform: translateX(-4px) translateY(4px);
+  }
+
+  .dro-magic-text-tooltip.tooltip-bottom-right::after {
+    transform: translateX(4px) translateY(4px);
+  }
+}
 
 /* Responsive: Prevent tooltip from going off-screen */
 @media (max-width: 768px) {
