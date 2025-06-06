@@ -19,7 +19,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'DRO_MAGIC_TEXT_BLOCK_VERSION', '1.3.0' );
+$dro_magic_text_block_version = get_file_data(
+	__FILE__,
+	array(
+		'Version' => 'Version',
+	)
+);
+define( 'DRO_MAGIC_TEXT_BLOCK_VERSION', $dro_magic_text_block_version['Version'] );
 
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
@@ -51,7 +57,7 @@ function dro_magic_text_block_enqueue_block_assets() {
 		'dro-magic-text-formats-style',
 		plugins_url( 'build/magic-text-block/style-index.css', __FILE__ ),
 		array(),
-		'0.1.0'
+		DRO_MAGIC_TEXT_BLOCK_VERSION,
 	);
 }
 add_action( 'wp_enqueue_scripts', 'dro_magic_text_block_enqueue_block_assets' );
