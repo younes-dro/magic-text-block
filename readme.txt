@@ -5,7 +5,7 @@ Tags:              block, gutenberg, rich text, typography
 Requires at least: 6.5
 Tested up to:      6.8
 Requires PHP:      7.4
-Stable tag:        1.2.0
+Stable tag:        1.3.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -33,7 +33,8 @@ This plugin's code is [available on GitHub](https://github.com/younes-dro/magic-
 
 Watch our step-by-step guide on how to apply Magic Text Block formatting in WordPress! Learn how to enhance your text with gradient effects, background images, and stylish underlines.
 
-📺 **Watch the tutorial here**: [https://www.youtube.com/watch?v=dPYiz_a6-6A](https://www.youtube.com/watch?v=dPYiz_a6-6A)
+📺 **Watch the tutorial here**: 
+https://www.youtube.com/watch?v=dPYiz_a6-6A
 
 == Installation ==
 
@@ -73,6 +74,9 @@ Yes, the gradient colors are fully customizable through the editor interface.
 6. Tooltip Text - customizable tooltip. 
 
 == Changelog ==
+
+= 1.3.0 =
+* Enhanced **Tooltip Position** options: added 4 new diagonal positions (top-left, top-right, bottom-left, bottom-right) for more precise tooltip placement.
 
 = 1.2.0 =
 * Added **Tooltip Position** options: choose from top, bottom, left, right, and diagonal positions.

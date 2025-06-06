@@ -25,6 +25,7 @@ const GradientColorUI = ({
 }) => {
   return (
     <Popover
+      className="dro-magic-text-popover"
       animate={true}
       position="bottom right"
       offset={{ x: 10, y: 10 }}
@@ -95,13 +96,13 @@ const GradientTextColor = ({
     );
   }, [gradientCSS, onChange, value]);
 
-		const handleToolbarClick = useCallback(() => {
-			if (isActive) {
-				onChange(toggleFormat(value, { type: "dro-magic-text/gradient" }));
-			} else {
-				setIsAddingGradient(true);
-			}
-		}, [isActive, onChange, value]);
+  const handleToolbarClick = useCallback(() => {
+    if (isActive) {
+      onChange(toggleFormat(value, { type: "dro-magic-text/gradient" }));
+    } else {
+      setIsAddingGradient(true);
+    }
+  }, [isActive, onChange, value]);
 
   return (
     <>

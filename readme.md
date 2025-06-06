@@ -2,7 +2,7 @@
 
 ![Magic Text Block Banner](https://ps.w.org/magic-text-block/assets/banner-772-250.png)
 
-[![Plugin Version](https://img.shields.io/badge/version-1.2.0-blue)](https://wordpress.org/plugins/magic-text-block/)
+[![Plugin Version](https://img.shields.io/badge/version-1.3.0-blue)](https://wordpress.org/plugins/magic-text-block/)
 [![WordPress Tested](https://img.shields.io/badge/WordPress-6.5+-brightgreen)](https://wordpress.org/plugins/magic-text-block/)
 
 📦 **Available on WordPress.org**  

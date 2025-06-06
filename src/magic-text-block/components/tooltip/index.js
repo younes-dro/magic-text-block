@@ -55,7 +55,7 @@ const TooltipEffectUI = ({
     return (
         <Popover
             anchor={popoverAnchor}
-            className="tooltip-effect-popover"
+            className="dro-magic-text-popover"
             onClose={onClose}
         >
             <div style={{ padding: '16px', width: '320px' }}>

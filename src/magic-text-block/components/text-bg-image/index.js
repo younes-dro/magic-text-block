@@ -48,7 +48,7 @@ const TextBgImageUI = ({
   const fallbackFontSize = 16;
 
   return (
-    <Popover anchor={popoverAnchor} className="dro-magic-text-bg-popover">
+    <Popover anchor={popoverAnchor} className="dro-magic-text-popover">
       <div style={{ minWidth: "320px", padding: "16px" }}>
         <h4 style={{ marginBottom: "12px" }}>{LABEL_POPOVER_TITLE}</h4>
         <MediaUploadCheck>
