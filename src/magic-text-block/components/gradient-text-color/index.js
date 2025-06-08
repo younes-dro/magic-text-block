@@ -33,19 +33,28 @@ const GradientColorUI = ({
       anchor={popoverAnchor}
     >
       <h4>{LABEL_POPOVER_TITLE}</h4>
-      <ColorPicker
-        color={gradientStartColor}
-        onChange={(startColor) => setGradientStartColor(startColor)}
-      />
-      <ColorPicker
-        color={gradientEndColor}
-        onChange={(endColor) => setGradientEndColor(endColor)}
-      />
-      <TextControl
-        label={LABEL_GRADIENT_DEG}
-        value={gradientDeg}
-        onChange={(value) => setGradientDeg(value)}
-      />
+      <div style={{ marginBottom: "10px" }}>
+        <strong>{__('Start Color', 'dro-magic-text')}</strong>
+        <ColorPicker
+          color={gradientStartColor}
+          onChange={(startColor) => setGradientStartColor(startColor)}
+        />
+      </div>
+      <div style={{ marginBottom: "10px" }}>
+        <strong>{__('End Color', 'dro-magic-text')}</strong>
+        <ColorPicker
+          color={gradientEndColor}
+          onChange={(endColor) => setGradientEndColor(endColor)}
+        />
+      </div>
+      <div style={{ marginBottom: "10px" }}>
+        <TextControl
+          label={LABEL_GRADIENT_DEG}
+          value={gradientDeg}
+          onChange={(value) => setGradientDeg(value)}
+        />
+      </div>
+
       <Button
         variant="primary"
         onClick={() => {
