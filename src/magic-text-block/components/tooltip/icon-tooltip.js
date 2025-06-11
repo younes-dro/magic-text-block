@@ -1,4 +1,5 @@
 import { Icon } from "@wordpress/icons";
+
 const IconTooltip = () => (
     <Icon
         icon={
@@ -8,9 +9,10 @@ const IconTooltip = () => (
                 <rect x="5" y="5.5" width="8" height="1.5" rx="0.75" fill="white" opacity="0.8" />
                 <rect x="5" y="8" width="6" height="1.5" rx="0.75" fill="white" opacity="0.6" />
                 <circle cx="19" cy="19" r="3" fill="currentColor" opacity="0.7" />
-                <text x="19" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="3" font-weight="bold" fill="white">i</text>
+                <text x="19" y="22" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="3" fontWeight="bold" fill="white">i</text>
             </svg>
         }
     />
 );
+
 export default IconTooltip;
