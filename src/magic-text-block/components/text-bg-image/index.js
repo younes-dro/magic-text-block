@@ -8,6 +8,7 @@ import {
   MediaUploadCheck,
 } from "@wordpress/block-editor";
 import { Popover, Button, FontSizePicker } from "@wordpress/components";
+import IconBgImage from "./icon-text-bg-image";
 
 const textDomain = "dro-magic-text";
 
@@ -117,7 +118,7 @@ const TextBgImage = ({ value, onChange, isActive }) => {
     <>
       <div ref={setPopoverAnchor}>
         <RichTextToolbarButton
-          icon="format-image"
+          icon={IconBgImage}
           title={LABEL_TOOLBAR_TITLE}
           onClick={handleToolbarClick}
           isActive={isActive}

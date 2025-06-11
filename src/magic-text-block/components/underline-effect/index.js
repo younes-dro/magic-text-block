@@ -4,6 +4,7 @@ import { useState, useCallback } from "@wordpress/element";
 import { registerFormatType, toggleFormat } from "@wordpress/rich-text";
 import { RichTextToolbarButton } from "@wordpress/block-editor";
 import { Popover, Button, ColorPicker } from "@wordpress/components";
+import IconUnderlineCurve from "./icon-underline-curve";
 
 const UnderlineEffectUI = ({
   onClose,
@@ -72,7 +73,7 @@ const UnderlineEffect = ({
     <>
       <div ref={setPopoverAnchor}>
         <RichTextToolbarButton
-          icon="editor-underline"
+          icon={IconUnderlineCurve}
           title={__("Underline Effect", "dro-magic-text")}
           onClick={handleToolbarClick}
           isActive={isActive}
@@ -94,7 +95,7 @@ const UnderlineEffect = ({
 };
 
 registerFormatType("dro-magic-text/underline-effect", {
-  title: __("Underline Effect", "dro-magic-text"),
+  title: __("Underline Curve", "dro-magic-text"),
   tagName: "span",
   className: "dro-magic-text-underline-clip-effect",
   attributes: {

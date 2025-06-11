@@ -35,7 +35,7 @@ const ThemeDocumentSettingsPanel = () => {
 			const elementsToStyle = [iframeBody, editorContainer].filter(Boolean);
 
 			elementsToStyle.forEach(element => {
-				console.debug('1', element);
+				// console.debug('1', element);
 				element.classList.remove(
 					...ListAvailableThemes.map(theme => `magic-theme-${theme.value}`)
 				);
@@ -49,7 +49,7 @@ const ThemeDocumentSettingsPanel = () => {
 			if (enableThemeSelector && savedTheme && savedTheme !== "default") {
 				// alert(`theme-${savedTheme}`);
 				elementsToStyle.forEach(element => {
-					console.debug('2', element);
+					// console.debug('2', element);
 					element.classList.add(`magic-theme-${savedTheme}`);
 					element.classList.add(`theme-${savedTheme}`);
 				});

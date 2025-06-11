@@ -16,6 +16,7 @@ import { useState, useCallback } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 import './style.scss';
 import { tooltipPositions } from './options';
+import IconTooltip from './icon-tooltip';
 
 const TooltipEffectUI = ({
     LABEL_POPOVER_TITLE,
@@ -70,7 +71,7 @@ const TooltipEffectUI = ({
                     style={{ marginBottom: '16px' }}
                 />
 
-                {/* Tooltip Position */}
+                
                 <SelectControl
                     label={LABEL_TOOLTIP_POSITION}
                     help={__('Select the position of the tooltip', 'dro-magic-text')}
@@ -80,7 +81,7 @@ const TooltipEffectUI = ({
                     style={{ marginBottom: '16px' }}
                 />
 
-                {/* Background Style Toggle */}
+                
                 <ToggleControl
                     label={__('Use Gradient Background', 'dro-magic-text')}
                     help={useGradient ?
@@ -92,7 +93,6 @@ const TooltipEffectUI = ({
                     style={{ marginBottom: '16px' }}
                 />
 
-                {/* Background Color Settings */}
                 <TabPanel
                     className="tooltip-color-tabs"
                     activeClass="active-tab"
@@ -255,7 +255,7 @@ const TooltipEffect = ({ isActive, value, onChange, textDomain = "dro-magic-text
         <>
             <div ref={setPopoverAnchor}>
                 <RichTextToolbarButton
-                    icon={comment}
+                    icon={IconTooltip}
                     title={__('Add Tooltip', 'dro-magic-text')}
                     onClick={handleTooltipClick}
                     isActive={isActive}

@@ -8,6 +8,7 @@ import {
   TextControl,
   Button,
 } from "@wordpress/components";
+import IconGradient from "./icon-gradient";
 
 const GradientColorUI = ({
   onClose,
@@ -117,7 +118,7 @@ const GradientTextColor = ({
     <>
       <div ref={setPopoverAnchor}>
         <RichTextToolbarButton
-          icon="editor-code"
+          icon={IconGradient}
           title="Gradient Text Color"
           onClick={handleToolbarClick}
           isActive={isActive}
