@@ -34,7 +34,7 @@ const IconBgImage = () => (
                     <rect width="5" height="4" rx="0.5" fill="#374151" />
                     <rect x="0.5" y="0.5" width="4" height="3" rx="0.3" fill="white" />
                     <path d="M1 3 L2 2 L3 2.5 L4 1.5 L4.5 3.5 L1 3.5 Z" fill="#6b7280" />
-                    <!-- Sun dot -->
+                    
                     <circle cx="2" cy="1.8" r="0.3" fill="#fbbf24" />
                 </g>
                 <g transform="translate(3, 17)">
