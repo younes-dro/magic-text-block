@@ -5,7 +5,7 @@ Tags:              block, gutenberg, rich text, typography
 Requires at least: 6.5
 Tested up to:      6.8
 Requires PHP:      7.4
-Stable tag:        1.4.0
+Stable tag:        1.4.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -74,6 +74,10 @@ Yes, the gradient colors are fully customizable through the editor interface.
 6. Tooltip Text - customizable tooltip. 
 
 == Changelog ==
+
+= 1.4.1 =
+* Fixed React DOM warnings by converting SVG attributes to proper JSX format
+* Improved console output by eliminating invalid DOM property warnings
 
 = 1.4.0 =
 * Added custom SVG icons for all rich text format types
