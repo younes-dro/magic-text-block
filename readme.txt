@@ -71,7 +71,8 @@ Yes, the gradient colors are fully customizable through the editor interface.
 3. Text Background Image – Add visual depth with background images.
 4. Underline Effect – Improve text with custom underline styles.
 5. Post Theme Selector – Easily adjust text styling per post/page.
-6. Tooltip Text - customizable tooltip. 
+6. Tooltip Text - Customizable tooltip. 
+7. unstyle Text - Remove all formatting from selected text instantly.
 
 == Changelog ==
 
