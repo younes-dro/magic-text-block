@@ -5,7 +5,7 @@ Tags:              block, gutenberg, rich text, typography
 Requires at least: 6.5
 Tested up to:      6.8
 Requires PHP:      7.4
-Stable tag:        1.3.1
+Stable tag:        1.5.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -74,6 +74,22 @@ Yes, the gradient colors are fully customizable through the editor interface.
 6. Tooltip Text - customizable tooltip. 
 
 == Changelog ==
+
+= 1.5.0 =
+* Enhanced unstyle text format type with comprehensive formatting removal
+* Added robust format detection using WordPress data store for unstyle feature
+* Improved unstyle format removal to handle all registered format types instead of only active ones
+
+= 1.4.1 =
+* Fixed React DOM warnings by converting SVG attributes to proper JSX format
+* Improved console output by eliminating invalid DOM property warnings
+
+= 1.4.0 =
+* Added custom SVG icons for all rich text format types
+* New icons include: Tooltip, Text Background Image, Underline Effect, Gradient Text Color, and Gradient Stroke
+
+= 1.3.1 =
+Improve gradient color picker UI.
 
 = 1.3.0 =
 * Enhanced **Tooltip Position** options: added 4 new diagonal positions (top-left, top-right, bottom-left, bottom-right) for more precise tooltip placement.
