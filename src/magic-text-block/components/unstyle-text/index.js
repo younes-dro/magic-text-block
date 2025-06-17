@@ -1,28 +1,40 @@
-import { registerformatType } from '@wordpress/rich-text';
-import { RichTextToolbarButton, toggleFormat } from '@wordpress/block-editor';
+import { registerFormatType, removeFormat } from "@wordpress/rich-text";
+import { RichTextToolbarButton } from '@wordpress/block-editor';
+import { select } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
+import IconUnstyle from './icon-unstyle';
 
-registerformatType( 'magic-text-block/unstyle-text', {
-    title: __( 'Unstyle Text', 'magic-text-block' ),
+const UnstyleText = ({ isActive, onChange, value }) => {
+
+    const applyUnstyleText = () => {
+        const formatTypes = select('core/rich-text').getFormatTypes();
+
+        if (formatTypes && formatTypes.length > 0) {
+            let newValue = value;
+
+
+            formatTypes.forEach(formatType => {
+                // console.debug('Checking format type: ', formatType.name);
+                newValue = removeFormat(newValue, formatType.name);
+
+            });
+            onChange({ ...newValue });
+        }
+    }
+
+    return (
+        <RichTextToolbarButton
+            icon={IconUnstyle}
+            title={__('Unstyle Text', 'dro-magic-text')}
+            onClick={applyUnstyleText}
+            isActive={isActive}
+        />
+    );
+}
+
+registerFormatType('dro-magic-text/unstyle-test', {
+    title: __('Unstyle Text', 'dro-magic-text'),
     tagName: 'span',
     className: 'dro-magic-text-unstyle-text',
-    edit: ( { isActive, value, onChange } ) => {
-        console.log( 'Unstyle Text Format', value );
-        const handleUnstyleText = () => {
-            onChange(
-                toggleFormat( value, {
-                    type: 'magic-text-block/unstyle-text',
-                } )
-            );
-        };
-
-        return (
-            <RichTextToolbarButton
-                icon="editor-removeformatting"
-                title={ __( 'Unstyle Text', 'magic-text-block' ) }
-                onClick={ handleUnstyleText }
-                isActive={ isActive }
-            />
-        );
-    }
-});
+    edit: UnstyleText,
+})
