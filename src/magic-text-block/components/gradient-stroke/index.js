@@ -9,6 +9,7 @@ import {
 } from "@wordpress/components";
 import { useState, useCallback } from "@wordpress/element";
 import "./style.scss";
+import IconGradientStroke from "./icon-gradient-stroke";
 
 const GradientStrokeUI = ({
   onClose,
@@ -97,7 +98,7 @@ const GradientStroke = ({
     <>
       <div ref={setPopoverAnchor}>
         <RichTextToolbarButton
-          icon="admin-appearance"
+          icon={IconGradientStroke}
           title={__("Gradient Stroke", textDomain) || "Gradient Stroke"}
           onClick={handleToolbarClick}
           isActive={isActive}
