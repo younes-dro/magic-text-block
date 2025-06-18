@@ -23,6 +23,7 @@ Enhance your Gutenberg editor with advanced text formatting options.
 * **Text Background Image**: Select images from your media library to apply as backgrounds behind specific portions of text, creating striking visual effects.
 * **Underline Effects**: Apply decorative curved underline effects with customizable colors to highlight important text.
 * **Tooltip Text**: Add customizable tooltip bubbles to text with your own message, background color, and text color—great for inline explanations or quick hints.
+* **Unstyle Text**: Remove all formatting from selected text instantly.
 
 Perfect for bloggers, designers, and content creators looking to make their content stand out without requiring any coding knowledge. Simply select your text and apply the formatting options from the text toolbar.
 Compatible with all WordPress themes and works seamlessly with the Gutenberg block editor.
@@ -34,7 +35,7 @@ This plugin's code is [available on GitHub](https://github.com/younes-dro/magic-
 Watch our step-by-step guide on how to apply Magic Text Block formatting in WordPress! Learn how to enhance your text with gradient effects, background images, and stylish underlines.
 
 📺 **Watch the tutorial here**: 
-https://www.youtube.com/watch?v=dPYiz_a6-6A
+[Demo](https://www.youtube.com/watch?v=dPYiz_a6-6A)
 
 == Installation ==
 
@@ -72,7 +73,7 @@ Yes, the gradient colors are fully customizable through the editor interface.
 4. Underline Effect – Improve text with custom underline styles.
 5. Post Theme Selector – Easily adjust text styling per post/page.
 6. Tooltip Text - Customizable tooltip. 
-7. unstyle Text - Remove all formatting from selected text instantly.
+7. Unstyle Text - Remove all formatting from selected text instantly.
 
 == Changelog ==
 
