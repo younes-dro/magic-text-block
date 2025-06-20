@@ -4,7 +4,7 @@
  * Description:       Enhance your Gutenberg editor with advanced Rich Text formatting options directly in the toolbar.
  * Requires at least: 6.5
  * Requires PHP:      7.4
- * Version:           1.5.0
+ * Version:           1.6.0
  * Author:            Younes DRO
  * Author URI:        https://github.com/younes-dro/
  * Plugin URI:        https://github.com/younes-dro/magic-text-block
@@ -28,39 +28,17 @@ $dro_magic_text_block_version = get_file_data(
 define( 'DRO_MAGIC_TEXT_BLOCK_VERSION', $dro_magic_text_block_version['Version'] );
 
 /**
- * Registers the block using the metadata loaded from the `block.json` file.
- * Behind the scenes, it registers also all assets so they can be enqueued
- * through the block editor in the corresponding context.
+ * Load available translations.
  *
- * @see https://developer.wordpress.org/reference/functions/register_block_type/
+ * @return void
  */
 function dro_magic_text_block_block_init() {
-	if ( function_exists( 'wp_register_block_types_from_metadata_collection' ) ) {
-		wp_register_block_types_from_metadata_collection( __DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php' );
-	} else {
-		if ( function_exists( 'wp_register_block_metadata_collection' ) ) {
-			wp_register_block_metadata_collection( __DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php' );
-		}
-		$manifest_data = require __DIR__ . '/build/blocks-manifest.php';
-		foreach ( array_keys( $manifest_data ) as $block_type ) {
-			register_block_type( __DIR__ . "/build/{$block_type}" );
-		}
-	}
 
-	// Load available translations.
 	wp_set_script_translations( 'magic-text-block-editor-script-js', 'magic-text-block' );
 }
 add_action( 'init', 'dro_magic_text_block_block_init' );
 
-function dro_magic_text_block_enqueue_block_assets() {
-	wp_enqueue_style(
-		'dro-magic-text-formats-style',
-		plugins_url( 'build/magic-text-block/style-index.css', __FILE__ ),
-		array(),
-		DRO_MAGIC_TEXT_BLOCK_VERSION,
-	);
-}
-add_action( 'wp_enqueue_scripts', 'dro_magic_text_block_enqueue_block_assets' );
+
 
 /**
  * Registers a custom post meta field 'dro_magic_text_theme_meta'.
@@ -91,6 +69,50 @@ function dro_magic_text_register_post_meta() {
 add_action( 'init', 'dro_magic_text_register_post_meta' );
 
 /**
+ * Enqueues the plugin's custom editor script and styles.
+ *
+ * This function loads the compiled JavaScript (`index.js`) and the corresponding CSS (`index.css`)
+ * into the block editor (only). It also handles translation loading and dynamically resolves
+ * dependencies and version from the `index.asset.php` file.
+ *
+ * Hook: `enqueue_block_editor_assets`
+ * Runs only in the WordPress block editor context.
+ *
+ * @return void
+ */
+function dro_magic_text_enqueue_editor_script() {
+	
+	wp_enqueue_style(
+		'dro-magic-text-formats-editor-style',
+		plugin_dir_url( __FILE__ ) . 'build/style-index.css',
+		array(),
+		DRO_MAGIC_TEXT_BLOCK_VERSION
+	);
+
+	$script_path = plugin_dir_path( __FILE__ ) . 'build/index.asset.php';
+	$asset       = file_exists( $script_path )
+		? include $script_path
+		: array(
+			'dependencies' => array(),
+			'version'      => DRO_MAGIC_TEXT_BLOCK_VERSION,
+		);
+
+
+	wp_enqueue_script(
+		'dro-magic-text-formats',
+		plugins_url( 'build/index.js', __FILE__ ),
+		$asset['dependencies'],
+		$asset['version'],
+		false
+	);
+
+	wp_set_script_translations( 'dro-magic-text-formats', 'magic-text-block' );
+}
+add_action( 'enqueue_block_assets', 'dro_magic_text_enqueue_editor_script' );
+
+
+
+/**
  * Enqueue the theme CSS file if a custom theme is selected.
  *
  * @return void
@@ -100,11 +122,18 @@ function dro_magic_text_enqueue_theme_css() {
 		return;
 	}
 
+	wp_enqueue_style(
+		'dro-magic-text-formats-style',
+		plugin_dir_url( __FILE__ ) . 'build/style-index.css',
+		array(),
+		DRO_MAGIC_TEXT_BLOCK_VERSION,
+	);
+
 	$post_id     = get_queried_object_id();
 	$saved_theme = get_post_meta( $post_id, 'dro_magic_text_theme_meta', true );
 
 	if ( $saved_theme && $saved_theme !== 'default' ) {
-		$theme_css_url = plugin_dir_url( __FILE__ ) . 'build/magic-text-block/index.css';
+		$theme_css_url = plugin_dir_url( __FILE__ ) . 'build/index.css';
 		wp_enqueue_style( 'magic-text-theme-css', $theme_css_url, array(), DRO_MAGIC_TEXT_BLOCK_VERSION );
 	}
 }
