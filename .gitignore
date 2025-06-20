@@ -1,5 +1,6 @@
 
 # Ignore all example files in any component folder
+build
 example/
 **/example-*
 bin
