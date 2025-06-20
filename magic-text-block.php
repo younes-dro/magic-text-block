@@ -33,7 +33,7 @@ define( 'DRO_MAGIC_TEXT_BLOCK_VERSION', $dro_magic_text_block_version['Version']
  * @return void
  */
 function dro_magic_text_block_block_init() {
-	
+
 	wp_set_script_translations( 'magic-text-block-editor-script-js', 'magic-text-block' );
 }
 add_action( 'init', 'dro_magic_text_block_block_init' );
@@ -68,7 +68,20 @@ function dro_magic_text_register_post_meta() {
 }
 add_action( 'init', 'dro_magic_text_register_post_meta' );
 
+/**
+ * Enqueues the plugin's custom editor script and styles.
+ *
+ * This function loads the compiled JavaScript (`index.js`) and the corresponding CSS (`index.css`)
+ * into the block editor (only). It also handles translation loading and dynamically resolves
+ * dependencies and version from the `index.asset.php` file.
+ *
+ * Hook: `enqueue_block_editor_assets`
+ * Runs only in the WordPress block editor context.
+ *
+ * @return void
+ */
 function dro_magic_text_enqueue_editor_script() {
+	
 	wp_enqueue_style(
 		'dro-magic-text-formats-editor-style',
 		plugin_dir_url( __FILE__ ) . 'build/style-index.css',
@@ -77,15 +90,13 @@ function dro_magic_text_enqueue_editor_script() {
 	);
 
 	$script_path = plugin_dir_path( __FILE__ ) . 'build/index.asset.php';
-
-	if ( file_exists( $script_path ) ) {
-		$asset = include $script_path;
-	} else {
-		$asset = [
-			'dependencies' => [],
+	$asset       = file_exists( $script_path )
+		? include $script_path
+		: array(
+			'dependencies' => array(),
 			'version'      => DRO_MAGIC_TEXT_BLOCK_VERSION,
-		];
-	}
+		);
+
 
 	wp_enqueue_script(
 		'dro-magic-text-formats',
@@ -97,7 +108,8 @@ function dro_magic_text_enqueue_editor_script() {
 
 	wp_set_script_translations( 'dro-magic-text-formats', 'magic-text-block' );
 }
-add_action( 'enqueue_block_editor_assets', 'dro_magic_text_enqueue_editor_script' );
+add_action( 'enqueue_block_assets', 'dro_magic_text_enqueue_editor_script' );
+
 
 
 /**
@@ -109,11 +121,10 @@ function dro_magic_text_enqueue_theme_css() {
 	if ( ! is_singular() ) {
 		return;
 	}
-	
-		wp_enqueue_style(
+
+	wp_enqueue_style(
 		'dro-magic-text-formats-style',
-		plugin_dir_url ( __FILE__) . 'build/style-index.css',
-		
+		plugin_dir_url( __FILE__ ) . 'build/style-index.css',
 		array(),
 		DRO_MAGIC_TEXT_BLOCK_VERSION,
 	);
