@@ -81,10 +81,16 @@ add_action( 'init', 'dro_magic_text_register_post_meta' );
  * @return void
  */
 function dro_magic_text_enqueue_editor_script() {
-	
+
 	wp_enqueue_style(
 		'dro-magic-text-formats-editor-style',
 		plugin_dir_url( __FILE__ ) . 'build/style-index.css',
+		array(),
+		DRO_MAGIC_TEXT_BLOCK_VERSION
+	);
+	wp_enqueue_style(
+		'dro-magic-text-formats-editor-style',
+		plugin_dir_url( __FILE__ ) . 'build/index.css',
 		array(),
 		DRO_MAGIC_TEXT_BLOCK_VERSION
 	);
@@ -96,7 +102,6 @@ function dro_magic_text_enqueue_editor_script() {
 			'dependencies' => array(),
 			'version'      => DRO_MAGIC_TEXT_BLOCK_VERSION,
 		);
-
 
 	wp_enqueue_script(
 		'dro-magic-text-formats',
