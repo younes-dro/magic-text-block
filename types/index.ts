@@ -6,15 +6,12 @@ export interface MagicTextBlockAttributes {
     fontFamily?: string;
     textColor?: string;
     backgroundColor?: string;
-    // Gradient settings
     gradientBackground?: string;
     gradientDirection?: number;
-    // Tooltip settings
     tooltipText?: string;
     showTooltip?: boolean;
-    // Custom theme
     customTheme?: string;
-    
+
 }
 
 // Edit Component Props
