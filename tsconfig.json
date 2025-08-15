@@ -21,7 +21,8 @@
   "include": [
     "src/**/*",
     "assets/**/*",
-    "blocks/**/*"
+    "blocks/**/*",
+    "types/**/*"
   ],
   "exclude": [
     "node_modules",

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name:       Magic Text Block
  * Description:       Enhance your Gutenberg editor with advanced Rich Text formatting options directly in the toolbar.
@@ -113,7 +114,7 @@ function dro_magic_text_enqueue_editor_script() {
 
 	wp_set_script_translations( 'dro-magic-text-formats', 'magic-text-block' );
 }
-add_action( 'enqueue_block_assets', 'dro_magic_text_enqueue_editor_script' );
+add_action( 'enqueue_block_editor_assets', 'dro_magic_text_enqueue_editor_script' );
 
 
 
