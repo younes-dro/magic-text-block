@@ -1,22 +1,40 @@
 # Magic Text Block
 
+  
+
 ![Magic Text Block Banner](https://ps.w.org/magic-text-block/assets/banner-772-250.png)
 
-[![Plugin Version](https://img.shields.io/badge/version-1.5.0-blue)](https://wordpress.org/plugins/magic-text-block/)
+  
+
+[![Plugin Version](https://img.shields.io/badge/version-1.6.0-blue)](https://wordpress.org/plugins/magic-text-block/)
+
 [![WordPress Tested](https://img.shields.io/badge/WordPress-6.5+-brightgreen)](https://wordpress.org/plugins/magic-text-block/)
 
-📦 **Available on WordPress.org**  
+  
+
+📦 **Available on WordPress.org**
+
 🔗 [Download from the WordPress Plugin Directory](https://wordpress.org/plugins/magic-text-block/)
 
----
-**Magic Text Block** is a collection of advanced text formatting tools designed to extend the WordPress Gutenberg editor. These components allow you to easily apply creative typography and styling effects—such as gradient strokes, colorful text gradients, text background images, and custom underlines—directly from the text toolbar. Perfect for bloggers, designers, and content creators, these tools help make your content visually striking without any coding required.
+  
 
 ---
+
+**Magic Text Block** is a collection of advanced text formatting tools designed to extend the WordPress Gutenberg editor. These components allow you to easily apply creative typography and styling effects—such as gradient strokes, colorful text gradients, text background images, and custom underlines—directly from the text toolbar. Perfect for bloggers, designers, and content creators, these tools help make your content visually striking without any coding required.
+
+  
+
+---
+
+  
 
 # Available Components
 
- 
+  
+
 ## Gradient Text Color
+
+  
 
   
 
@@ -24,7 +42,11 @@
 
   
 
+  
+
 [🎥 Demo video here](https://www.awesomescreenshot.com/video/37866815?key=43be1d30dc3033eba865e0f43c999e60)
+
+  
 
   
 
@@ -32,7 +54,11 @@
 
   
 
+  
+
 <img  src="https://github.com/user-attachments/assets/4ea944ff-159f-43aa-b527-5f4a26d33aa8"  alt="gutenberg-underline-text-effect"  width="300">
+
+  
 
   
 
@@ -40,7 +66,11 @@
 
   
 
+  
+
 ## Image in Text Background
+
+  
 
   
 
@@ -48,7 +78,11 @@
 
   
 
+  
+
 [🎥 Demo video here](https://www.awesomescreenshot.com/video/38083508?key=82ac6ceeec794b24b8e236819a4f1aab)
+
+  
 
   
 
@@ -56,7 +90,11 @@
 
   
 
+  
+
 <img  src="https://github.com/user-attachments/assets/579bd1ac-ab0c-4e66-9cea-bb6652b96f5a"  alt="gutenberg-text-background-image-effect"  width="300">
+
+  
 
   
 
@@ -64,7 +102,11 @@
 
   
 
+  
+
 ## Post/Page Theme Selector
+
+  
 
   
 
@@ -72,26 +114,49 @@
 
   
 
+  
+
 [🎥 Demo video here](https://www.awesomescreenshot.com/video/39031925?key=aa41ad83e0eedf3e614060c6e2e05ffb)
 
+  
+  
 
- ## Tooltip 
+## Tooltip
 
- 
+  
+
 ![screenshot-6](https://github.com/user-attachments/assets/8a96098a-ccfe-49da-9be2-d7091e86cb2e)
+
+  
 
 [🎥 Demo video here](https://www.awesomescreenshot.com/video/40571636?key=29e3628e162ef8121e4fec5597cfe10a)
 
-## Installation
+  
 
-## Unstyle Text  
+## Unstyle Text
+
 ![Capture d'écran 2025-06-17 215958](https://github.com/user-attachments/assets/705b4563-d859-4c6e-9b03-dec8c953d0c0)
 
+  
+
+## Realistic Text Marker
+
+Transform your text with authentic highlighter effects using 8 handcrafted marker styles. Choose from uneven, thick, messy, double, faded, wavy, and textured markers that simulate real highlighter pen strokes with CSS gradients and transforms.
+
+  
+
+## Installation
+
+  
 
 1. Clone the repository:
 
   
 
+  
+
 ```bash
 
-git clone https://github.com/younes-dro/magic-text-block.git
+  
+
+git  clone  https://github.com/younes-dro/magic-text-block.git
