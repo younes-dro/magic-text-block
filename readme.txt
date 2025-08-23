@@ -5,7 +5,7 @@ Tags:              block, gutenberg, rich text, typography
 Requires at least: 6.5
 Tested up to:      6.8
 Requires PHP:      7.4
-Stable tag:        1.5.0
+Stable tag:        1.6.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -24,6 +24,7 @@ Enhance your Gutenberg editor with advanced text formatting options.
 * **Underline Effects**: Apply decorative curved underline effects with customizable colors to highlight important text.
 * **Tooltip Text**: Add customizable tooltip bubbles to text with your own message, background color, and text color—great for inline explanations or quick hints.
 * **Unstyle Text**: Remove all formatting from selected text instantly.
+* **Realistic Text Marker**: Highlight text with authentic marker effects using 8 handcrafted styles (uneven, thick, messy, double, faded, wavy, textured) that simulate real highlighter strokes.
 
 Perfect for bloggers, designers, and content creators looking to make their content stand out without requiring any coding knowledge. Simply select your text and apply the formatting options from the text toolbar.
 Compatible with all WordPress themes and works seamlessly with the Gutenberg block editor.
@@ -74,8 +75,12 @@ Yes, the gradient colors are fully customizable through the editor interface.
 5. Post Theme Selector – Easily adjust text styling per post/page.
 6. Tooltip Text - Customizable tooltip. 
 7. Unstyle Text - Remove all formatting from selected text instantly.
+8. Realistic Text Marker – Highlight text with authentic marker effects and 8 handcrafted styles.
 
 == Changelog ==
+
+= 1.6.0 =
+* Added **Realistic Text Marker** with 8 authentic highlighter styles and live preview selection interface
 
 = 1.5.0 =
 * Enhanced unstyle text format type with comprehensive formatting removal
