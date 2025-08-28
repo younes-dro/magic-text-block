@@ -143,6 +143,8 @@
 
 Transform your text with authentic highlighter effects using 8 handcrafted marker styles. Choose from uneven, thick, messy, double, faded, wavy, and textured markers that simulate real highlighter pen strokes with CSS gradients and transforms.
 
+<img width="1039" height="660" alt="screenshot-8" src="https://github.com/user-attachments/assets/ec7d66a2-39ae-43dc-9748-52f229c1eda7" />
+
   
 
 ## Installation
