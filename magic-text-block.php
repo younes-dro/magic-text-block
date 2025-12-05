@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Magic Text Block
+ * Plugin Name:       Magic Text Block — Styles & Effects: Gradients and Tooltips
  * Description:       Enhance your Gutenberg editor with advanced Rich Text formatting options directly in the toolbar.
  * Requires at least: 6.5
  * Requires PHP:      7.4
