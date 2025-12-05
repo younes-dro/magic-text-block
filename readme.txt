@@ -1,9 +1,9 @@
-=== Magic Text Block - Effects & Styling Toolkit - Gradients, Tooltips, Backgrounds & Custom Themes ===
+=== Gutenberg Text Styles & Effects: Gradients, Highlights, Tooltips ===
 Contributors:      vanbom
 Donate link: https://paypal.me/younesdro
 Tags:              block, gutenberg, rich text, typography
 Requires at least: 6.5
-Tested up to:      6.8
+Tested up to:      6.9
 Requires PHP:      7.4
 Stable tag:        1.6.0
 License: GPLv3 or later
@@ -68,7 +68,7 @@ Yes, the gradient colors are fully customizable through the editor interface.
 
 == Screenshots ==
 
-1. Gradient Stroke – Apply unique strokes to text using gradients.
+1. Demo Video - All the features in action.
 2. Gradient Text Color – Enhance text appearance with gradient colors.
 3. Text Background Image – Add visual depth with background images.
 4. Underline Effect – Improve text with custom underline styles.
@@ -76,6 +76,7 @@ Yes, the gradient colors are fully customizable through the editor interface.
 6. Tooltip Text - Customizable tooltip. 
 7. Unstyle Text - Remove all formatting from selected text instantly.
 8. Realistic Text Marker – Highlight text with authentic marker effects and 8 handcrafted styles.
+9. Gradient Stroke – Apply unique strokes to text using gradients.
 
 == Changelog ==
 
