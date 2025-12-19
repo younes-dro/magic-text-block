@@ -1,4 +1,4 @@
-=== Gutenberg Text Styles & Effects: Gradients, Highlights, Tooltips ===
+=== Magic Text Block — Styles & Effects: Gradients and Tooltips ===
 Contributors:      vanbom
 Donate link: https://paypal.me/younesdro
 Tags:              block, gutenberg, rich text, typography
