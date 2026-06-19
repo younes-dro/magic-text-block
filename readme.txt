@@ -1,11 +1,11 @@
-=== Magic Text Block — Styles & Effects: Gradients and Tooltips ===
+=== Rich Text Formats Block ===
 Contributors:      vanbom
 Donate link: https://paypal.me/younesdro
 Tags:              rich text format, gutenberg, text effects
 Requires at least: 6.5
 Tested up to:      7.0
 Requires PHP:      7.4
-Stable tag:        1.6.2
+Stable tag:        1.6.3
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
